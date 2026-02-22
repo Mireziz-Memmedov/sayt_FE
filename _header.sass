@@ -1,0 +1,97 @@
+//başlıq hissə
+#header
+    padding: 25px 0
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 1
+    background-color: #005909
+    .imgbox
+        img
+            width: 50px
+            &:hover
+                cursor: pointer
+    nav
+        a
+            color: #d1cfcf
+            margin-left: 30px
+            font-size: 16px
+            &:hover
+                color: #c0a916
+                cursor: pointer
+    .minimenu
+        position: relative
+        display: none
+        background-color: #080808
+        border: 4px solid #767373
+        border-radius: 10%
+        h5
+            color: #ffff
+        &:hover
+        .dropdown
+            display: none
+            position: absolute
+            background-color: #212529
+            min-width: 80px
+            box-shadow: 0 2px 6px #7c7c7c
+            top: 100%
+            left: 0
+            z-index: 100
+            .option
+                display: flex
+                flex-direction: column
+                a
+                    color: #ffffff
+                    border: 1px solid #8c8c8c
+                    margin: 2px
+                    &:hover
+                        background-color: #40454a
+                        cursor: pointer
+                        color: #ff0000
+
+    @media ( max-width: 992px )
+        .minimenu
+            display: block
+        nav
+            display: none
+
+//Modal üçün 
+.modal
+    position: fixed
+    inset: 0
+    background: rgba(0, 0, 0, 0.6)
+    display: none
+    justify-content: center
+    align-items: center
+    z-index: 999
+
+    &.active
+        display: flex
+
+    .modal-box
+        border: 3px solid #00de1e
+        border-radius: 8px
+        width: 300px
+        text-align: center
+        overflow: hidden
+        position: relative
+
+        #cancel
+            background-color: #ffffff
+            padding: 3px
+            border: none
+            border-radius: 5px
+            cursor: pointer
+            transition: 0.3s
+            position: absolute
+            top: 5px
+            right: 5px
+
+            &:hover
+                background-color: #909090
+
+        .imgbox
+            width: 100%
+            height: 100%
+            object-fit: cover
