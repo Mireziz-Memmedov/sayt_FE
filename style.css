@@ -128,12 +128,6 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
-#welcome .box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
 #welcome .box h1 {
   font-size: 60px;
   font-weight: 700;
@@ -148,17 +142,58 @@ section {
   line-height: 1.4;
 }
 #welcome .box2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#welcome .box2 .textbox {
-  background-color: #322d2d;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(232, 232, 232, 0.15);
   max-width: 350px;
   width: 100%;
   max-height: 600px;
   min-height: 300px;
   height: auto;
-  border: 1px solid #2f2b2e;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+#welcome .box2 .icon {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#welcome .box2 .icon i {
+  color: #F5C542;
+  font-size: 50px;
+}
+#welcome .box2 .textbox h1 {
+  margin: 20px 0 5px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+}
+#welcome .box2 .textbox h2 {
+  color: #8b8989;
+}
+#welcome .box2 .minibox {
+  margin: 0 10px;
+}
+#welcome .box2 .minibox .btn {
+  margin-top: 20px;
+  background-color: #F5C542;
+  border-radius: 20px;
+  width: 100%;
+}
+#welcome .box2 .minibox .btn ul li {
+  display: flex;
+}
+#welcome .box2 .minibox .btn ul li .icon {
+  margin-right: 30px;
+  margin-left: 20px;
+}
+#welcome .box2 .minibox .btn ul li .icon i {
+  color: #000000;
+  font-size: 25px;
+}
+#welcome .box2 .minibox .btn ul li .text {
+  text-align: left;
+}
+#welcome .box2 .minibox .btn ul li .text h1 {
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

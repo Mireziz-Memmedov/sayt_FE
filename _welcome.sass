@@ -3,12 +3,7 @@
     background-size: cover
     font-family: 'Montserrat', sans-serif
 #welcome
-
     .box
-        display: flex
-        flex-direction: column
-        justify-content: center
-        height: 100%
         h1
             font-size: 60px
             font-weight: 700
@@ -20,15 +15,50 @@
             color: #8b8989
             line-height: 1.4
     .box2
-        display: flex
-        justify-content: center
-        align-items: center
+        background-color: rgba(255,255,255,0.08)
+        backdrop-filter: blur(10px)
+        -webkit-backdrop-filter: blur(10px)
+        border: 2px solid rgba(232, 232, 232, 0.15)
+        max-width: 350px
+        width: 100%
+        max-height: 600px
+        min-height: 300px
+        height: auto
+        border-radius: 20px
+        .icon
+            margin-top: 10px
+            display: flex
+            justify-content: center
+            i
+                color: #F5C542
+                font-size: 50px
+
         .textbox
-            background-color: #322d2d
-            max-width: 350px
-            width: 100%
-            max-height: 600px
-            min-height: 300px
-            height: auto
-            border: 1px solid #2f2b2e
-            border-radius: 10px
+            h1
+                margin: 20px 0 5px
+                font-size: 30px
+                font-weight: 600
+                color: #ffffff
+            h2
+                color: #8b8989
+
+        .minibox
+            margin: 0 10px
+            .btn
+                margin-top: 20px
+                background-color: #F5C542
+                border-radius: 20px
+                width: 100%
+                ul
+                    li
+                        display: flex
+                        .icon
+                            margin-right: 30px
+                            margin-left: 20px
+                            i
+                                color: #000000
+                                font-size: 25px
+                        .text
+                            text-align: left
+                            h1
+                                font-weight: 700
