@@ -128,6 +128,9 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
+#welcome .box {
+  margin-bottom: 20px;
+}
 #welcome .box h1 {
   font-size: 60px;
   font-weight: 700;
@@ -142,11 +145,12 @@ section {
   line-height: 1.4;
 }
 #welcome .box2 {
+  padding: 40px 0;
   background-color: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 2px solid rgba(232, 232, 232, 0.15);
-  max-width: 350px;
+  max-width: 370px;
   width: 100%;
   max-height: 600px;
   min-height: 300px;
@@ -154,13 +158,16 @@ section {
   border-radius: 20px;
 }
 #welcome .box2 .icon {
-  margin-top: 10px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 #welcome .box2 .icon i {
   color: #F5C542;
   font-size: 50px;
+}
+#welcome .box2 .textbox {
+  margin: 10px 0;
 }
 #welcome .box2 .textbox h1 {
   margin: 20px 0 5px;
@@ -174,11 +181,42 @@ section {
 #welcome .box2 .minibox {
   margin: 0 10px;
 }
+#welcome .box2 .minibox .divider {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+#welcome .box2 .minibox .divider span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;
+  cursor: text;
+}
+#welcome .box2 .minibox .divider span::before, #welcome .box2 .minibox .divider span::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #a8a6a6;
+}
+#welcome .box2 .minibox .divider span::before {
+  margin-right: 10px;
+}
+#welcome .box2 .minibox .divider span::after {
+  margin-left: 10px;
+}
+#welcome .box2 .minibox .btn,
+#welcome .box2 .minibox .btn * {
+  cursor: pointer;
+}
 #welcome .box2 .minibox .btn {
-  margin-top: 20px;
+  margin: 10px 0;
   background-color: #F5C542;
   border-radius: 20px;
   width: 100%;
+  border: 1px solid #8b8989;
+}
+#welcome .box2 .minibox .btn:hover {
+  background-color: #775803;
 }
 #welcome .box2 .minibox .btn ul li {
   display: flex;
@@ -196,4 +234,20 @@ section {
 }
 #welcome .box2 .minibox .btn ul li .text h1 {
   font-weight: 700;
+}
+#welcome .box2 .minibox .color {
+  background-color: #242527;
+  border: 1px solid #8b8989;
+}
+#welcome .box2 .minibox .color:hover {
+  background-color: #515255;
+}
+#welcome .box2 .minibox .color ul li .icon i {
+  color: #ffffff;
+}
+#welcome .box2 .minibox .color ul li .text h1 {
+  color: #ffffff;
+}
+#welcome .box2 .minibox .color ul li .text h2 {
+  color: #8b8989;
 }/*# sourceMappingURL=style.css.map */

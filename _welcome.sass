@@ -4,6 +4,7 @@
     font-family: 'Montserrat', sans-serif
 #welcome
     .box
+        margin-bottom: 20px
         h1
             font-size: 60px
             font-weight: 700
@@ -15,25 +16,27 @@
             color: #8b8989
             line-height: 1.4
     .box2
+        padding: 40px 0
         background-color: rgba(255,255,255,0.08)
         backdrop-filter: blur(10px)
         -webkit-backdrop-filter: blur(10px)
         border: 2px solid rgba(232, 232, 232, 0.15)
-        max-width: 350px
+        max-width: 370px
         width: 100%
         max-height: 600px
         min-height: 300px
         height: auto
         border-radius: 20px
         .icon
-            margin-top: 10px
             display: flex
+            align-items: center
             justify-content: center
             i
                 color: #F5C542
                 font-size: 50px
 
         .textbox
+            margin: 10px 0
             h1
                 margin: 20px 0 5px
                 font-size: 30px
@@ -44,11 +47,42 @@
 
         .minibox
             margin: 0 10px
+            .divider
+                display: flex
+                justify-content: center
+                margin: 10px
+
+                span
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    color: #ffffff
+                    cursor: text
+
+                    &::before,
+                    &::after
+                        content: ""
+                        flex: 1
+                        border-bottom: 1px solid #a8a6a6
+
+                    &::before
+                        margin-right: 10px
+
+                    &::after
+                        margin-left: 10px
+
+            .btn,
+            .btn *
+                cursor: pointer
+
             .btn
-                margin-top: 20px
+                margin: 10px 0
                 background-color: #F5C542
                 border-radius: 20px
                 width: 100%
+                border: 1px solid #8b8989
+                &:hover
+                    background-color: #775803
                 ul
                     li
                         display: flex
@@ -62,3 +96,19 @@
                             text-align: left
                             h1
                                 font-weight: 700
+            .color
+                background-color: #242527
+                border: 1px solid #8b8989
+                &:hover
+                    background-color: #515255
+                ul
+                    li
+                        .icon
+                            i
+                                color: #ffffff
+
+                        .text
+                            h1
+                                color: #ffffff
+                            h2
+                                color: #8b8989
