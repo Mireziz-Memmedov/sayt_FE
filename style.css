@@ -254,16 +254,20 @@ section {
 
 #body {
   font-family: "Montserrat", sans-serif;
-  background-color: #0a3045;
+  background-image: url(Assets/signup.jpg);
+  background-size: cover;
 }
 
 #signup .box {
-  background-color: #55778f;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 2px solid #a8a6a6;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
   padding: 25px 5px;
   width: 90%;
   max-width: 300px;
@@ -279,17 +283,19 @@ section {
   justify-content: flex-start;
 }
 #signup .box .left .home {
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  background-color: #adbec8;
-  border: 2px solid #a8a6a6;
   width: 50px;
   height: 50px;
 }
 #signup .box .left .home i {
-  color: #2188a9;
+  color: #F5C542;
   font-size: 30px;
 }
 #signup .box .icon {
@@ -321,7 +327,7 @@ section {
   border-radius: 5px;
   margin: 10px 20px;
   padding: 10px;
-  background-color: #748b9b;
+  background-color: #242527;
   border: 2px solid #a8a6a6;
   color: #ffffff;
 }
@@ -342,7 +348,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2188a9;
+  background-color: #F5C542;
   border-radius: 15px;
   margin: 20px 0;
   padding: 5px 20px;
@@ -360,7 +366,7 @@ section {
   margin-bottom: 10px;
 }
 #signup .box .minibox a {
-  color: #004157;
+  color: #F5C542;
   cursor: pointer;
   font-weight: 700;
 }
