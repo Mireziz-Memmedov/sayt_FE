@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="signup.js" defer></script>
+    <script src="https://kit.fontawesome.com/51d2f8b0de.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title data-key="login">SIGNUP</title>
+</head>
+
+<body id="body">
+    <header>
+
+    </header>
+
+    <main>
+        <section id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="box text-center">
+                            <div class="left">
+                                <div class="home">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h1>CREATE ACCOUNT</h1>
+                            <div class="add">
+                                <input type="text" id="username" placeholder="Username" data-key="username">
+                                <div class="password-box" style="position: relative;">
+                                    <input type="password" id="password" placeholder="Password" data-key="password">
+                                    <i class="fa-solid fa-eye-slash" id="toggle-password"
+                                        style="color:#cdcaca; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                                </div>
+                                <input type="email" id="email" name="email" placeholder="Email" data-key="email"
+                                    required>
+                            </div>
+                            <div class="logbox">
+                                <button id="login-btn" class="btn" data-key="login">
+                                    <h3>Sign up</h3>
+                                </button>
+                            </div>
+
+                            <p id="error-msg" style="color:red; font-weight:bold;"></p>
+
+                            <div class="minibox d-flex justify-content-center">
+                                <p data-key="have_account">Already have an account?</p>
+                                <a data-key="login" href="index.html">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
