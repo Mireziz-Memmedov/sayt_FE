@@ -20,4 +20,45 @@ $(document).ready(function () {
         }
     });
 
+    //signup endpoindi istifade etmek
+    function signup() {
+        const username = $('#username').val().trim();
+        const password = $('#password').val().trim();
+        const email = $('#email').val().trim();
+        const errorMsg = $('#error-msg');
+        const url = 'https://sayt-be.onrender.com/api/signup/'
+
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username,
+                password,
+                email
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                if (data.success) {
+                    errorMsg.hide();
+                    alert('Verification code sent successfully')
+                } else {
+                    alert(data.error)
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                errorMsg.text("Server error").show();
+            });
+    }
+
+    $('#login-btn').click(function (e) {
+        e.preventDefault();
+        signup();
+    });
+
 });
