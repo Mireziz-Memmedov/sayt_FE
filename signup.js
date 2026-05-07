@@ -28,6 +28,11 @@ $(document).ready(function () {
         const errorMsg = $('#error-msg');
         const url = 'https://sayt-be.onrender.com/api/signup/'
 
+        if (password.length < 8) {
+            errorMsg.text("Password must be at least 8 characters long.").show();
+            return;
+        }
+
         fetch(url, {
             method: "POST",
             headers: {
@@ -47,7 +52,7 @@ $(document).ready(function () {
                     errorMsg.hide();
                     alert('Verification code sent successfully')
                 } else {
-                    alert(data.error)
+                    errorMsg.text(data.error).show();
                 }
             })
             .catch(error => {
