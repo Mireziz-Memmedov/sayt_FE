@@ -28,6 +28,11 @@ $(document).ready(function () {
         const errorMsg = $('#error-msg');
         const url = 'https://sayt-be.onrender.com/api/signup/'
 
+        if (!username || !password || !email) {
+            errorMsg.text("All fields must be filled in.").show();
+            return;
+        }
+
         if (password.length < 8) {
             errorMsg.text("Password must be at least 8 characters long.").show();
             return;
@@ -51,6 +56,7 @@ $(document).ready(function () {
                 if (data.success) {
                     errorMsg.hide();
                     alert('Verification code sent successfully')
+                    window.location.href = "./signup.html";
                 } else {
                     errorMsg.text(data.error).show();
                 }
@@ -64,6 +70,13 @@ $(document).ready(function () {
     $('#login-btn').click(function (e) {
         e.preventDefault();
         signup();
+    });
+
+    $(document).on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            signup();
+        }
     });
 
 });
