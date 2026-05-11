@@ -1,0 +1,80 @@
+#verify_body
+    min-height: 100dvh
+    font-family: 'Montserrat', sans-serif
+    background-image: url(Assets/verify.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 80% center
+
+    #verify
+        min-height: 100dvh
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .box
+
+            .add
+                display: flex
+                flex-direction: column
+                align-items: center
+
+                .icon
+                    i
+                        font-size: 30px
+                        color: #9a0000
+
+                h1
+                    color: #ffffff
+                    font-weight: 500
+                    font-size: 25px
+                    cursor: text
+                    margin: 15px 0
+
+                p
+                    color: #8b8989
+                    cursor: text
+
+                .otp
+                    margin-top: 30px
+                    display: flex
+                    gap: 10px
+
+                .otp input
+                    width: 45px
+                    height: 50px
+                    text-align: center
+                    font-size: 22px
+                    border-radius: 8px
+                    color: #ffffff
+
+                    background: rgba(255, 255, 255, 0.08)
+                    border: 1px solid rgba(255, 255, 255, 0.25)
+                    border-radius: 12px
+
+                    backdrop-filter: blur(12px)
+                    -webkit-backdrop-filter: blur(12px)
+
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25)
+
+                    outline: none
+                    transition: 0.3s
+
+                    &:focus
+                        border: 1px solid rgba(255, 255, 255, 0.6)
+                        background: rgba(255, 255, 255, 0.12)
+                        transform: scale(1.05)
+
+            .minibox
+                margin-top: 30px
+
+                p
+                    color: #8b8989
+                    margin-right: 5px
+                    cursor: text
+
+                a
+                    color: #9a0000
+                    &:hover
+                        text-decoration: underline
+                        cursor: pointer

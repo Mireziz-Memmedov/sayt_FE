@@ -56,7 +56,7 @@ $(document).ready(function () {
                 if (data.success) {
                     errorMsg.hide();
                     alert('Verification code sent successfully')
-                    window.location.href = "./signup.html";
+                    window.location.href = "./verify.html";
                 } else {
                     errorMsg.text(data.error).show();
                 }
