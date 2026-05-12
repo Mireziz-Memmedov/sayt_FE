@@ -391,6 +391,17 @@ section {
   align-items: center;
   justify-content: center;
 }
+#verify_body #verify .box .back-btn {
+  margin-bottom: 15px;
+}
+#verify_body #verify .box .back-btn a i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #ffffff;
+}
+#verify_body #verify .box .back-btn a i:hover {
+  color: #9a0000;
+}
 #verify_body #verify .box .add {
   display: flex;
   flex-direction: column;
