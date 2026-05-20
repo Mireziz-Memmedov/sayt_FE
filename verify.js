@@ -22,8 +22,26 @@ $(document).ready(function () {
 
     function verifyCode(code) {
         console.log("Verifying:", code);
-        // fetch backend endpoint burada çağırılır
-    }
+        fetch("https://sayt-be.onrender.com/api/verify/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ code })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log("OTP verified successfully!");
+                window.location.href = "./index.html";
+            } else {
+                console.error("Failed to verify OTP.");
+            }
+        })
+        .catch(error => {
+            console.error("Error occurred while verifying OTP:", error);
+        });
+    }     
 
     // silende avtomatik olaraq novbeti xanaya kecmesi ucun funksiya.
     inputs.forEach((input, index) => {
