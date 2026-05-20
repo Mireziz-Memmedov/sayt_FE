@@ -462,4 +462,129 @@ section {
 #verify_body #verify .box .minibox a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+#body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(Assets/signup.jpg);
+  background-size: cover;
+}
+
+#login .box {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  padding: 25px 5px;
+  width: 90%;
+  max-width: 300px;
+  min-width: 264px;
+}
+#login .box .left * {
+  cursor: pointer;
+}
+#login .box .left {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+#login .box .left .home {
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+#login .box .left .home i {
+  color: #F5C542;
+  font-size: 30px;
+}
+#login .box .icon {
+  border-radius: 50%;
+  background-color: #adbec8;
+  border: 2px solid #a8a6a6;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login .box .icon i {
+  color: #ffffff;
+  font-size: 50px;
+}
+#login .box h1 {
+  margin: 20px 0;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 25px;
+  cursor: text;
+}
+#login .box .add {
+  display: flex;
+  flex-direction: column;
+}
+#login .box .add input {
+  border-radius: 15px;
+  margin: 10px 20px;
+  padding: 10px;
+  background-color: #242527;
+  border: 2px solid #a8a6a6;
+  color: #ffffff;
+}
+#login .box .add input::-moz-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+#login .box .add input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+#login .box .logbox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#login .box .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5C542;
+  border-radius: 15px;
+  margin: 20px 0;
+  padding: 5px 20px;
+  max-width: 220px;
+  width: 220px;
+  border: 2px solid #a8a6a6;
+}
+#login .box .btn h3 {
+  color: #ffffff;
+}
+#login .box .btn h3:hover {
+  cursor: pointer;
+}
+#login .box p {
+  margin-bottom: 10px;
+}
+#login .box .minibox a {
+  color: #F5C542;
+  cursor: pointer;
+  font-weight: 700;
+}
+#login .box .minibox p {
+  color: #ffffff;
+  cursor: text;
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */

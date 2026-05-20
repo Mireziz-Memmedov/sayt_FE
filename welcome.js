@@ -5,4 +5,9 @@ $(document).ready(function () {
         window.location.href = "./signup.html";
     });
 
+    $('#login').click(function (e) {
+        e.preventDefault();
+        window.location.href = "./login.html";
+    });
+
 });
