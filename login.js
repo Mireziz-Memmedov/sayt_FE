@@ -59,4 +59,11 @@ $(document).ready(function () {
                 errorMsg.text("An error occurred. Please try again later.").show();
             });
     });
+
+    $(document).on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            $('#login-btn').click();
+        }
+    });
 });
