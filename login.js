@@ -23,11 +23,11 @@ $(document).ready(function () {
     //login endpoindi istifade etmek
     $('#login-btn').click(function (e) {
         e.preventDefault();
-        const usernameOrEmail = $('#username_or_email').val().trim();
+        const username_or_email = $('#username_or_email').val().trim();
         const password = $('#password').val().trim();
         const errorMsg = $('#error-msg');
 
-        if (!usernameOrEmail || !password) {
+        if (!username_or_email || !password) {
             errorMsg.text("All fields must be filled in.").show();
             return;
         }
@@ -38,7 +38,7 @@ $(document).ready(function () {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                username_or_email: usernameOrEmail,
+                username_or_email: username_or_email,
                 password
             })
         })
