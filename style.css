@@ -14,114 +14,6 @@ section {
   padding: 50px 0;
 }
 
-#header {
-  padding: 25px 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  background-color: #005909;
-}
-#header .imgbox img {
-  width: 50px;
-}
-#header .imgbox img:hover {
-  cursor: pointer;
-}
-#header nav a {
-  color: #d1cfcf;
-  margin-left: 30px;
-  font-size: 16px;
-}
-#header nav a:hover {
-  color: #c0a916;
-  cursor: pointer;
-}
-#header .minimenu {
-  position: relative;
-  display: none;
-  background-color: #080808;
-  border: 4px solid #767373;
-  border-radius: 10%;
-}
-#header .minimenu h5 {
-  color: white;
-}
-#header .minimenu .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #212529;
-  min-width: 80px;
-  box-shadow: 0 2px 6px #7c7c7c;
-  top: 100%;
-  left: 0;
-  z-index: 100;
-}
-#header .minimenu .dropdown .option {
-  display: flex;
-  flex-direction: column;
-}
-#header .minimenu .dropdown .option a {
-  color: #ffffff;
-  border: 1px solid #8c8c8c;
-  margin: 2px;
-}
-#header .minimenu .dropdown .option a:hover {
-  background-color: #40454a;
-  cursor: pointer;
-  color: #ff0000;
-}
-@media (max-width: 992px) {
-  #header .minimenu {
-    display: block;
-  }
-  #header nav {
-    display: none;
-  }
-}
-
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-.modal.active {
-  display: flex;
-}
-.modal .modal-box {
-  border: 3px solid #00de1e;
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-.modal .modal-box #cancel {
-  background-color: #ffffff;
-  padding: 3px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-.modal .modal-box #cancel:hover {
-  background-color: #909090;
-}
-.modal .modal-box .imgbox {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 #start {
   background-image: url(Assets/arxa_fon.png);
   background-size: cover;
@@ -587,4 +479,127 @@ section {
   color: #ffffff;
   cursor: text;
   margin-right: 5px;
+}
+
+#body_dashboard {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(Assets/arxa_fon_dashboard.png);
+  background-size: cover;
+}
+
+#dashboard-header {
+  font-family: "Montserrat", sans-serif;
+  padding: 25px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+#dashboard-header .imgbox {
+  display: flex;
+  align-items: center;
+}
+#dashboard-header .imgbox img {
+  border-radius: 10px;
+  width: 80px;
+}
+#dashboard-header .imgbox img:hover {
+  cursor: pointer;
+}
+#dashboard-header .imgbox h2 {
+  color: #F5C542;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-header nav a {
+  color: #d1cfcf;
+  margin-left: 30px;
+  font-size: 16px;
+}
+#dashboard-header nav a:hover {
+  color: #c0a916;
+  cursor: pointer;
+}
+#dashboard-header .minimenu {
+  position: relative;
+  display: none;
+  background-color: #080808;
+  border: 4px solid #767373;
+  border-radius: 10%;
+}
+#dashboard-header .minimenu h5 {
+  color: white;
+}
+#dashboard-header .minimenu .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #212529;
+  min-width: 80px;
+  box-shadow: 0 2px 6px #7c7c7c;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+#dashboard-header .minimenu .dropdown .option {
+  display: flex;
+  flex-direction: column;
+}
+#dashboard-header .minimenu .dropdown .option a {
+  color: #ffffff;
+  border: 1px solid #8c8c8c;
+  margin: 2px;
+}
+#dashboard-header .minimenu .dropdown .option a:hover {
+  background-color: #40454a;
+  cursor: pointer;
+  color: #ff0000;
+}
+@media (max-width: 992px) {
+  #dashboard-header .minimenu {
+    display: block;
+  }
+  #dashboard-header nav {
+    display: none;
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal.active {
+  display: flex;
+}
+.modal .modal-box {
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.modal .modal-box .cancel {
+  padding: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.modal .modal-box .cancel:hover {
+  background-color: #F5C542;
+  border-radius: 20px;
+}
+.modal .modal-box .imgbox {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

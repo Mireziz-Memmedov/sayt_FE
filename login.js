@@ -49,7 +49,7 @@ $(document).ready(function () {
                 if (data.success) {
                     errorMsg.hide();
                     alert('Login successful');
-                    window.location.href = "./index.html";
+                    window.location.href = "./dashboard.html";
                 } else {
                     errorMsg.text("Invalid username/email or password.").show();
                 }
