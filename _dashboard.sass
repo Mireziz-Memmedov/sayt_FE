@@ -2,9 +2,13 @@
     font-family: 'Montserrat', sans-serif
     background-image: url(Assets/arxa_fon_dashboard.png)
     background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-attachment: fixed
 
 #dashboard-header
-    font-family: 'Montserrat', sans-serif
+    background: rgba(0, 0, 0, 0.75)
+    backdrop-filter: blur(10px)
     padding: 25px 0
     position: fixed
     top: 0
@@ -60,8 +64,194 @@
                         background-color: #40454a
                         cursor: pointer
                         color: #ff0000
+#dashboard-section
+    margin-top: 50px
+    display: flex
+    align-items: center
+    .dashboard-box
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
 
-    @media ( max-width: 992px )
+        .home *, .profile *, .messages *, .favorites *, .settings *, .logout *
+            cursor: pointer
+
+        .home
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+        .profile
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+        .messages
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+        .favorites
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+        .settings
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+        .logout
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+@media ( max-width: 992px )
+    #dashboard-header
         .minimenu
             display: block
         nav

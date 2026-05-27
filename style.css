@@ -16,8 +16,11 @@ section {
 
 #start {
   background-image: url(Assets/arxa_fon.png);
-  background-size: cover;
   font-family: "Montserrat", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 #welcome .box {
@@ -148,6 +151,8 @@ section {
   font-family: "Montserrat", sans-serif;
   background-image: url(Assets/signup.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #signup .box {
@@ -160,7 +165,6 @@ section {
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-  padding: 25px 5px;
   width: 90%;
   max-width: 300px;
   min-width: 264px;
@@ -169,6 +173,7 @@ section {
   cursor: pointer;
 }
 #signup .box .left {
+  margin-top: 5px;
   padding: 5px;
   width: 100%;
   display: flex;
@@ -256,6 +261,9 @@ section {
   cursor: pointer;
 }
 #signup .box p {
+  margin-bottom: 10px;
+}
+#signup .box .minibox {
   margin-bottom: 10px;
 }
 #signup .box .minibox a {
@@ -360,6 +368,9 @@ section {
   font-family: "Montserrat", sans-serif;
   background-image: url(Assets/signup.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 #login .box {
@@ -485,10 +496,14 @@ section {
   font-family: "Montserrat", sans-serif;
   background-image: url(Assets/arxa_fon_dashboard.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 #dashboard-header {
-  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
   padding: 25px 0;
   position: fixed;
   top: 0;
@@ -555,6 +570,219 @@ section {
   cursor: pointer;
   color: #ff0000;
 }
+
+#dashboard-section {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#dashboard-section .dashboard-box .home *, #dashboard-section .dashboard-box .profile *, #dashboard-section .dashboard-box .messages *, #dashboard-section .dashboard-box .favorites *, #dashboard-section .dashboard-box .settings *, #dashboard-section .dashboard-box .logout * {
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .home:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .home:hover .icon i, #dashboard-section .dashboard-box .home:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .home .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .home .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .home .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .profile:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .profile:hover .icon i, #dashboard-section .dashboard-box .profile:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .profile .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .profile .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .profile .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .messages:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .messages:hover .icon i, #dashboard-section .dashboard-box .messages:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .messages .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .messages .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .messages .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .favorites:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .favorites:hover .icon i, #dashboard-section .dashboard-box .favorites:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .favorites .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .favorites .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .favorites .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .settings:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .settings:hover .icon i, #dashboard-section .dashboard-box .settings:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .settings .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .settings .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .settings .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .logout:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .logout:hover .icon i, #dashboard-section .dashboard-box .logout:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .logout .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .logout .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .logout .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
 @media (max-width: 992px) {
   #dashboard-header .minimenu {
     display: block;
@@ -563,7 +791,6 @@ section {
     display: none;
   }
 }
-
 .modal {
   position: fixed;
   inset: 0;
