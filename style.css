@@ -15,11 +15,11 @@ section {
 }
 
 #start {
-  background-image: url(Assets/arxa_fon.png);
+  background-image: url(Assets/arxa_fon_welcome.png);
   font-family: "Montserrat", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
 }
 
@@ -511,64 +511,28 @@ section {
   left: 0;
   z-index: 1;
 }
-#dashboard-header .imgbox {
+#dashboard-header .box {
   display: flex;
   align-items: center;
 }
-#dashboard-header .imgbox img {
-  border-radius: 10px;
-  width: 80px;
+#dashboard-header .box .icon {
+  color: #F5C542;
+  font-size: 40px;
+  margin-right: 10px;
 }
-#dashboard-header .imgbox img:hover {
-  cursor: pointer;
-}
-#dashboard-header .imgbox h2 {
+#dashboard-header .box h2 {
   color: #F5C542;
   margin-left: 10px;
   font-weight: 700;
 }
-#dashboard-header nav a {
-  color: #d1cfcf;
-  margin-left: 30px;
+#dashboard-header .user-info {
+  display: flex;
+  align-items: center;
+  color: #F5C542;
   font-size: 16px;
 }
-#dashboard-header nav a:hover {
-  color: #c0a916;
-  cursor: pointer;
-}
-#dashboard-header .minimenu {
-  position: relative;
-  display: none;
-  background-color: #080808;
-  border: 4px solid #767373;
-  border-radius: 10%;
-}
-#dashboard-header .minimenu h5 {
-  color: white;
-}
-#dashboard-header .minimenu .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #212529;
-  min-width: 80px;
-  box-shadow: 0 2px 6px #7c7c7c;
-  top: 100%;
-  left: 0;
-  z-index: 100;
-}
-#dashboard-header .minimenu .dropdown .option {
-  display: flex;
-  flex-direction: column;
-}
-#dashboard-header .minimenu .dropdown .option a {
-  color: #ffffff;
-  border: 1px solid #8c8c8c;
-  margin: 2px;
-}
-#dashboard-header .minimenu .dropdown .option a:hover {
-  background-color: #40454a;
-  cursor: pointer;
-  color: #ff0000;
+#dashboard-header .user-info .username {
+  margin-right: 20px;
 }
 
 #dashboard-section {
@@ -581,7 +545,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
-#dashboard-section .dashboard-box .home *, #dashboard-section .dashboard-box .profile *, #dashboard-section .dashboard-box .messages *, #dashboard-section .dashboard-box .favorites *, #dashboard-section .dashboard-box .settings *, #dashboard-section .dashboard-box .logout * {
+#dashboard-section .dashboard-box .home *, #dashboard-section .dashboard-box .listings *, #dashboard-section .dashboard-box .profile *, #dashboard-section .dashboard-box .messages *, #dashboard-section .dashboard-box .favorites *, #dashboard-section .dashboard-box .settings *, #dashboard-section .dashboard-box .logout * {
   cursor: pointer;
 }
 #dashboard-section .dashboard-box .home {
@@ -613,6 +577,39 @@ section {
   transition: 0.3s;
 }
 #dashboard-section .dashboard-box .home .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .listings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .listings:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .listings:hover .icon i, #dashboard-section .dashboard-box .listings:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .listings .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .listings .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .listings .icon h2 {
   color: #d1cfcf;
   margin-left: 10px;
   font-weight: 700;
@@ -783,50 +780,88 @@ section {
   font-weight: 700;
 }
 
+#body_listings {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(Assets/arxa_fon_dashboard.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#listings-header {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 25px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+#listings-header .box {
+  display: flex;
+  align-items: center;
+}
+#listings-header .box .icon {
+  color: #F5C542;
+  font-size: 40px;
+  margin-right: 10px;
+}
+#listings-header .box h2 {
+  color: #F5C542;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#listings-header nav a {
+  color: #d1cfcf;
+  margin-left: 30px;
+  font-size: 16px;
+}
+#listings-header nav a:hover {
+  color: #c0a916;
+  cursor: pointer;
+}
+#listings-header .minimenu {
+  position: relative;
+  display: none;
+  background-color: #080808;
+  border: 4px solid #767373;
+  border-radius: 10%;
+}
+#listings-header .minimenu h5 {
+  color: white;
+}
+#listings-header .minimenu .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #212529;
+  min-width: 80px;
+  box-shadow: 0 2px 6px #7c7c7c;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+#listings-header .minimenu .dropdown .option {
+  display: flex;
+  flex-direction: column;
+}
+#listings-header .minimenu .dropdown .option a {
+  color: #ffffff;
+  border: 1px solid #8c8c8c;
+  margin: 2px;
+}
+#listings-header .minimenu .dropdown .option a:hover {
+  background-color: #40454a;
+  cursor: pointer;
+  color: #c0a916;
+}
+
 @media (max-width: 992px) {
-  #dashboard-header .minimenu {
+  #listings-header .minimenu {
     display: block;
   }
-  #dashboard-header nav {
+  #listings-header nav {
     display: none;
   }
-}
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-.modal.active {
-  display: flex;
-}
-.modal .modal-box {
-  border-radius: 8px;
-  width: 300px;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-.modal .modal-box .cancel {
-  padding: 3px;
-  cursor: pointer;
-  transition: 0.3s;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-weight: 700;
-  font-size: 20px;
-}
-.modal .modal-box .cancel:hover {
-  background-color: #F5C542;
-  border-radius: 20px;
-}
-.modal .modal-box .imgbox {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

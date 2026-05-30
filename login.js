@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // console.log("LOGIN ORIGIN:", location.origin);
 
     //Əsas səyfəyə qayıtmaq üçün
     $('.left').click(function (e) {
@@ -39,14 +40,18 @@ $(document).ready(function () {
             },
             body: JSON.stringify({
                 username_or_email: username_or_email,
-                password
+                password: password
             })
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
 
                 if (data.success) {
+                    //login olanda localStorage-a username ve email-i yazmaq
+                    localStorage.setItem('username', data.username);
+                    localStorage.setItem('email', data.email);
+
                     errorMsg.hide();
                     alert('Login successful');
                     window.location.href = "./dashboard.html";

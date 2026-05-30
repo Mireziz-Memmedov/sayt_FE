@@ -15,55 +15,24 @@
     right: 0
     left: 0
     z-index: 1
-    .imgbox
+    .box
         display: flex
         align-items: center
-        img
-            border-radius: 10px
-            width: 80px
-            &:hover
-                cursor: pointer
+        .icon
+            color: #F5C542
+            font-size: 40px
+            margin-right: 10px
         h2
             color: #F5C542
             margin-left: 10px
             font-weight: 700
-    nav
-        a
-            color: #d1cfcf
-            margin-left: 30px
-            font-size: 16px
-            &:hover
-                color: #c0a916
-                cursor: pointer
-    .minimenu
-        position: relative
-        display: none
-        background-color: #080808
-        border: 4px solid #767373
-        border-radius: 10%
-        h5
-            color: #ffff
-        &:hover
-        .dropdown
-            display: none
-            position: absolute
-            background-color: #212529
-            min-width: 80px
-            box-shadow: 0 2px 6px #7c7c7c
-            top: 100%
-            left: 0
-            z-index: 100
-            .option
-                display: flex
-                flex-direction: column
-                a
-                    color: #ffffff
-                    border: 1px solid #8c8c8c
-                    margin: 2px
-                    &:hover
-                        background-color: #40454a
-                        cursor: pointer
-                        color: #ff0000
+    .user-info
+        display: flex
+        align-items: center
+        color: #F5C542
+        font-size: 16px
+        .username
+            margin-right: 20px
 #dashboard-section
     margin-top: 50px
     display: flex
@@ -73,10 +42,39 @@
         justify-content: center
         flex-wrap: wrap
 
-        .home *, .profile *, .messages *, .favorites *, .settings *, .logout *
+        .home *, .listings *, .profile *, .messages *, .favorites *, .settings *, .logout *
             cursor: pointer
 
         .home
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+        
+        .listings
             display: flex
             flex-direction: column
             align-items: center
@@ -249,48 +247,3 @@
                     color: #d1cfcf
                     margin-left: 10px
                     font-weight: 700
-
-@media ( max-width: 992px )
-    #dashboard-header
-        .minimenu
-            display: block
-        nav
-            display: none
-
-//Modal üçün 
-.modal
-    position: fixed
-    inset: 0
-    background: rgba(0, 0, 0, 0.6)
-    display: none
-    justify-content: center
-    align-items: center
-    z-index: 999
-
-    &.active
-        display: flex
-
-    .modal-box
-        border-radius: 8px
-        width: 300px
-        text-align: center
-        overflow: hidden
-        position: relative
-
-        .cancel
-            padding: 3px
-            cursor: pointer
-            transition: 0.3s
-            position: absolute
-            top: 5px
-            right: 5px
-            font-weight: 700
-            font-size: 20px
-            &:hover
-                background-color: #F5C542
-                border-radius: 20px
-
-        .imgbox
-            width: 100%
-            height: 100%
-            object-fit: cover
