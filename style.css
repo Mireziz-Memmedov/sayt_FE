@@ -536,16 +536,29 @@ section {
 }
 
 #dashboard-section {
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   align-items: center;
+}
+#dashboard-section .welcome-box {
+  text-align: center;
+  color: #F5C542;
+  margin-bottom: 30px;
+}
+#dashboard-section .welcome-box h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+#dashboard-section .welcome-box p {
+  font-size: 16px;
+  margin-top: 5px;
 }
 #dashboard-section .dashboard-box {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-#dashboard-section .dashboard-box .home *, #dashboard-section .dashboard-box .listings *, #dashboard-section .dashboard-box .profile *, #dashboard-section .dashboard-box .messages *, #dashboard-section .dashboard-box .favorites *, #dashboard-section .dashboard-box .settings *, #dashboard-section .dashboard-box .logout * {
+#dashboard-section .dashboard-box .home *, #dashboard-section .dashboard-box .listings *, #dashboard-section .dashboard-box .add_listing *, #dashboard-section .dashboard-box .profile *, #dashboard-section .dashboard-box .messages *, #dashboard-section .dashboard-box .notifications *, #dashboard-section .dashboard-box .favorites *, #dashboard-section .dashboard-box .settings *, #dashboard-section .dashboard-box .security *, #dashboard-section .dashboard-box .logout * {
   cursor: pointer;
 }
 #dashboard-section .dashboard-box .home {
@@ -610,6 +623,39 @@ section {
   transition: 0.3s;
 }
 #dashboard-section .dashboard-box .listings .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
+#dashboard-section .dashboard-box .add_listing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .add_listing:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .add_listing:hover .icon i, #dashboard-section .dashboard-box .add_listing:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .add_listing .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .add_listing .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .add_listing .icon h2 {
   color: #d1cfcf;
   margin-left: 10px;
   font-weight: 700;
@@ -680,6 +726,39 @@ section {
   margin-left: 10px;
   font-weight: 700;
 }
+#dashboard-section .dashboard-box .notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .notifications:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .notifications:hover .icon i, #dashboard-section .dashboard-box .notifications:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .notifications .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .notifications .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .notifications .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
 #dashboard-section .dashboard-box .favorites {
   display: flex;
   flex-direction: column;
@@ -746,6 +825,39 @@ section {
   margin-left: 10px;
   font-weight: 700;
 }
+#dashboard-section .dashboard-box .security {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 195px;
+  height: 150px;
+  margin: 10px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .security:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#dashboard-section .dashboard-box .security:hover .icon i, #dashboard-section .dashboard-box .security:hover .icon h2 {
+  color: #F5C542;
+}
+#dashboard-section .dashboard-box .security .icon {
+  display: flex;
+  align-items: center;
+}
+#dashboard-section .dashboard-box .security .icon i {
+  color: #d1cfcf;
+  font-size: 40px;
+  transition: 0.3s;
+}
+#dashboard-section .dashboard-box .security .icon h2 {
+  color: #d1cfcf;
+  margin-left: 10px;
+  font-weight: 700;
+}
 #dashboard-section .dashboard-box .logout {
   display: flex;
   flex-direction: column;
@@ -780,6 +892,27 @@ section {
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  #dashboard-header .box {
+    display: block;
+    text-align: center;
+  }
+  #dashboard-header .box .icon {
+    font-size: 15px;
+  }
+  #dashboard-header .box h2 {
+    font-size: 10px;
+  }
+  #dashboard-header .user-info {
+    display: block;
+    text-align: start;
+    font-size: 10px;
+  }
+  #dashboard-header .user-info .username {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
 #body_listings {
   font-family: "Montserrat", sans-serif;
   background-image: url(Assets/arxa_fon_dashboard.png);

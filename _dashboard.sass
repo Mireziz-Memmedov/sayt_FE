@@ -15,9 +15,11 @@
     right: 0
     left: 0
     z-index: 1
+
     .box
         display: flex
         align-items: center
+        
         .icon
             color: #F5C542
             font-size: 40px
@@ -26,23 +28,39 @@
             color: #F5C542
             margin-left: 10px
             font-weight: 700
+
     .user-info
         display: flex
         align-items: center
         color: #F5C542
         font-size: 16px
+
         .username
             margin-right: 20px
+
 #dashboard-section
-    margin-top: 50px
+    margin-top: 80px
     display: flex
     align-items: center
+
+    .welcome-box
+        text-align: center
+        color: #F5C542
+        margin-bottom: 30px
+
+        h2
+            font-size: 24px
+            font-weight: 700
+        p
+            font-size: 16px
+            margin-top: 5px
+
     .dashboard-box
         display: flex
         justify-content: center
         flex-wrap: wrap
 
-        .home *, .listings *, .profile *, .messages *, .favorites *, .settings *, .logout *
+        .home *, .listings *, .add_listing *, .profile *, .messages *, .notifications *, .favorites *, .settings *, .security *, .logout *
             cursor: pointer
 
         .home
@@ -73,8 +91,37 @@
                     color: #d1cfcf
                     margin-left: 10px
                     font-weight: 700
-        
+
         .listings
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
+        .add_listing
             display: flex
             flex-direction: column
             align-items: center
@@ -161,6 +208,35 @@
                     margin-left: 10px
                     font-weight: 700
 
+        .notifications
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
         .favorites
             display: flex
             flex-direction: column
@@ -219,6 +295,35 @@
                     margin-left: 10px
                     font-weight: 700
 
+        .security
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            background-color: rgba(0, 0, 0, 0.6)
+            border-radius: 10px
+            width: 195px
+            height: 150px
+            margin: 10px
+            transition: 0.3s
+            &:hover
+                background-color: rgba(0, 0, 0, 0.8)
+                cursor: pointer
+                .icon
+                    i, h2
+                        color: #F5C542
+            .icon
+                display: flex
+                align-items: center
+                i
+                    color: #d1cfcf
+                    font-size: 40px
+                    transition: 0.3s
+                h2
+                    color: #d1cfcf
+                    margin-left: 10px
+                    font-weight: 700
+
         .logout
             display: flex
             flex-direction: column
@@ -247,3 +352,19 @@
                     color: #d1cfcf
                     margin-left: 10px
                     font-weight: 700
+@media (max-width: 768px)
+    #dashboard-header
+        .box
+            display: block
+            text-align: center
+            .icon
+                font-size: 15px
+            h2
+                font-size: 10px
+        .user-info
+            display: block
+            text-align: start
+            font-size: 10px
+            .username
+                margin-right: 0
+                margin-top: 10px
