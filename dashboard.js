@@ -17,4 +17,17 @@ $(document).ready(function () {
         window.location.href = 'listings.html';
     });
 
+//logout düyməsinə click edəndə istifadəçi məlumatlarını localStorage-dan silmək və login səhifəsinə yönləndirmək
+    $('.logout').on('click', function () {
+        localStorage.removeItem('username');
+        localStorage.removeItem('email');
+        window.location.href = 'login.html';
+    });
+
+//username olmadan dashboard səhifəsinə daxil olmağa çalışanda login səhifəsinə yönləndirmək
+    if (!username) {
+        window.location.href = 'login.html';
+        return;
+    }
+
 });
