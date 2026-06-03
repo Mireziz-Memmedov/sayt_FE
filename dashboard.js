@@ -17,6 +17,10 @@ $(document).ready(function () {
         window.location.href = 'listings.html';
     });
 
+    $('.add_listing').on('click', function () {
+        window.location.href = 'add_listing.html';
+    });
+
 //logout düyməsinə click edəndə istifadəçi məlumatlarını localStorage-dan silmək və login səhifəsinə yönləndirmək
     $('.logout').on('click', function () {
         localStorage.removeItem('username');
