@@ -9,6 +9,23 @@ $(document).ready(function () {
         yearSelect.appendChild(option);
     }
 
+    //make secende ona uygun model secimi gelsin
+    $('#make').on('change', function () {
+        const make = $(this).val();
+        const modelSelect = $('#model');
+
+        modelSelect.html('<option value="">Select Model</option>');
+
+        if (make === 'Toyota') {
+            modelSelect.append(`
+                <option value="Corolla">Corolla</option>
+                <option value="Camry">Camry</option>
+                <option value="RAV4">RAV4</option>
+            `);
+        }
+    });
+
+
     //max 20 sekil qebul edecek, drag&drop ve input file ile sekil secme funksionalligi
     const MAX_FILES = 20;
     let selectedFiles = [];

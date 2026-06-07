@@ -90,7 +90,7 @@
                                         <option>Subaru</option>
                                         <option>Suzuki</option>
                                         <option>Tesla</option>
-                                        <option>Toyota</option>
+                                        <option value="Toyota">Toyota</option>
                                         <option>Volkswagen</option>
                                         <option>Volvo</option>
                                     </select>
@@ -98,7 +98,9 @@
 
                                 <div class="mb-3">
                                     <label for="model" class="form-label">Model</label>
-                                    <input type="text" class="form-control" id="model" name="model" required>
+                                    <select class="form-control" id="model" name="model" required>
+                                        <option value="">Select Model</option>
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
@@ -143,7 +145,8 @@
 
                                 <div class="mb-3">
                                     <label for="engine" class="form-label">Engine (L)</label>
-                                    <input type="number" step="0.1" class="form-control" id="engine" name="engine" required>
+                                    <input type="number" step="0.1" class="form-control" id="engine" name="engine"
+                                        required>
                                 </div>
 
                                 <div class="mb-3">
@@ -172,7 +175,8 @@
 
                                 <div class="mb-3">
                                     <label for="description" class="form-label">Description</label>
-                                    <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+                                    <textarea class="form-control" id="description" name="description"
+                                        rows="5"></textarea>
                                 </div>
 
                                 <div class="mb-3">
