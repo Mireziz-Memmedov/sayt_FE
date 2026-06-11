@@ -627,39 +627,6 @@ section {
   margin-left: 10px;
   font-weight: 700;
 }
-#dashboard-section .dashboard-box .add_listing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  width: 195px;
-  height: 150px;
-  margin: 10px;
-  transition: 0.3s;
-}
-#dashboard-section .dashboard-box .add_listing:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-}
-#dashboard-section .dashboard-box .add_listing:hover .icon i, #dashboard-section .dashboard-box .add_listing:hover .icon h2 {
-  color: #F5C542;
-}
-#dashboard-section .dashboard-box .add_listing .icon {
-  display: flex;
-  align-items: center;
-}
-#dashboard-section .dashboard-box .add_listing .icon i {
-  color: #d1cfcf;
-  font-size: 40px;
-  transition: 0.3s;
-}
-#dashboard-section .dashboard-box .add_listing .icon h2 {
-  color: #d1cfcf;
-  margin-left: 10px;
-  font-weight: 700;
-}
 #dashboard-section .dashboard-box .profile {
   display: flex;
   flex-direction: column;
