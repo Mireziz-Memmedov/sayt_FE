@@ -106,16 +106,36 @@ $(document).ready(function () {
     });
 
     // form submit
-    $('#listing-form').on('submit', function (e) {
+    $('#add-listing-form').on('submit', function (e) {
         e.preventDefault();
 
         const formData = new FormData(this);
 
         selectedFiles.forEach((file, index) => {
-            formData.append('images[]', file);
+            formData.append('images', file);
         });
 
         // burada formData ile backend'e gonderme kodu olacaq
-    });
 
+        fetch("https://sayt-be.onrender.com/api/add_listing/", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("access_token")
+            },
+            body: formData
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Listing yaradıldı!");
+                    window.location.reload();
+                } else {
+                    alert("Xəta baş verdi!");
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Server xətası!");
+            });
+    });
 });
