@@ -51,6 +51,8 @@ $(document).ready(function () {
                     //login olanda localStorage-a username ve email-i yazmaq
                     localStorage.setItem('username', data.username);
                     localStorage.setItem('email', data.email);
+                    localStorage.setItem('access_token', data.access);
+                    localStorage.setItem('refresh_token', data.refresh);
 
                     errorMsg.hide();
                     alert('Login successful');
