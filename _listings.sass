@@ -2,7 +2,42 @@
     font-family: 'Montserrat', sans-serif
 
 #listings-section
-    padding: 100px 0
+    padding: 110px 0
+
+    #listings-container
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 20px
+
+        .listing-box *
+            cursor: pointer
+
+        .listing-box
+            width: 250px
+            background-color: #444444
+            border-radius: 10px
+            overflow: hidden
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+            transition: transform 0.3s ease, box-shadow 0.3s ease
+            &:hover
+                transform: translateY(-5px)
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3)
+
+            .imgbox
+                width: 100%
+                height: 150px
+                overflow: hidden
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+
+            .textbox
+                padding: 3px
+                p
+                    color: #F5C542
+                    margin: 2px 0
 
 #listings-header
     background: rgba(0, 0, 0, 0.75)

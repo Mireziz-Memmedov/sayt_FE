@@ -33,7 +33,6 @@ $(document).ready(function () {
     })
         .then(response => response.json())
         .then(data => {
-            console.log('Data received:', data); // DEBUG
 
             $('#listings-container').html('');
             const listingsContainer = $('#listings-container');
@@ -44,15 +43,16 @@ $(document).ready(function () {
                     ? listing.images[0].image
                     : '';
 
-                console.log('Image URL:', imageUrl); // DEBUG
-
                 const listingBox = $(`
                                         <div class="listing-box">
-                                            ${imageUrl ? `<img src="${imageUrl}" alt="${listing.make} ${listing.model}" style="width: 100%; height: auto; object-fit: cover;">` : '<p>No image available</p>'}
-                                            <p><strong>Make:</strong> ${listing.make}</p>
-                                            <p><strong>Model:</strong> ${listing.model}</p>
-                                            <p><strong>Price:</strong> $${listing.price}</p>
-                                            <p><strong>Year:</strong> ${listing.year}</p>
+                                            <div class="imgbox">
+                                                ${imageUrl ? `<img src="${imageUrl}" alt="${listing.make} ${listing.model}">` : '<p>No image available</p>'}
+                                            </div>
+                                            <div class="textbox">
+                                                <p><strong></strong> ${listing.make}, ${listing.model}</p>
+                                                <p><strong></strong> ${listing.price} AZN</p>
+                                                <p><strong></strong> ${listing.year}, ${listing.engine} L, ${listing.mileage} km</p>
+                                            </div>
                                         </div>
                                     `);
                 listingsContainer.append(listingBox);
