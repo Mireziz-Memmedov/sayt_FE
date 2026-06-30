@@ -52,6 +52,7 @@ $(document).ready(function () {
                                                 <p><strong></strong> ${listing.make}, ${listing.model}</p>
                                                 <p><strong></strong> ${listing.price} AZN</p>
                                                 <p><strong></strong> ${listing.year}, ${listing.engine} L, ${listing.mileage} km</p>
+                                                <p><strong></strong> ${listing.time}</p>
                                             </div>
                                         </div>
                                     `);
